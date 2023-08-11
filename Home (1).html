@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <title>Biblioteca CEEMTI</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./Imagens/LogoCEEMTI.jpg" type="image/png">
+        <style>
+            body{
+                background-color: rgb(34, 34, 34);
+                color: white;
+                font-family: arial, sans-serif;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            li{
+                display:inline-block;
+                margin: 20px;
+            }
+            a{
+                color: white;
+            }
+            a:hover{
+                transition: 0.3s all;
+            }
+            #Cad_Livro{
+                border: 2px solid #FF0000;
+                padding: 10px;
+                border-radius: 15px;
+            }
+            #Cad_Livro:hover{
+                background-color: #FF0000;
+                color: white;
+                transition: 0.3s all;
+            }
+            #title{
+                flex-direction: column;
+                line-height: 10px;
+            }
+            h1{
+                font-weight: 200;
+            }
+            main{
+                display: flex;
+                flex-direction: row;
+                margin-top: 50px;
+            }
+            h2{
+                font-size: 36px;
+                line-height: 30px;
+                font-family: Times New Roman;
+                text-align: center;
+            }
+            img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: solid 2px white;
+            }
+            .box{
+                height: 300px;
+                width: 300px;
+                margin-left: 5%;
+            }
+            p{
+                text-align: center;
+            }
+            @media screen and (max-width: 760px){
+                header{
+                    flex-direction: column;
+                }
+                main{
+                    flex-direction: column;
+                }
+                h2{
+                    font-size: 35px; 
+                    text-align: center;
+                }
+                input{
+                    align-self: center;
+                }
+                img{
+                    width: 200px;
+                    height: 300px;
+                    margin-left: 15%;
+                }
+                .box{
+                    margin-left: 20%;
+                    margin-bottom: 50px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="title">
+                <h1>Biblioteca</h1>
+                <h1>CEEMTI</h1>
+            </div>
+            
+            <ul>
+                <a href="./Cad_Livro.html"><li id="Cad_Livro">Cadastrar Livro</li></a>
+            </ul>
+        </header>
+        <h2>Catálogo</h2>
+        <main>
+            <div class="box">
+                <a href="http://ceemtibg.rf.gd/Livros/Livro01.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW36LQ6Stgpb5cyDYsma2NMxWTcfJoGQLAd71Vn5zsSJMlXr3zjBjdfqPykimJpCuZMe0&usqp=CAU">
+                </a>
+                <p>De olho em Zumbi dos Palmares</p>
+            </div>
+            
+    
+            <div class="box">
+                <a href="http://ceemtibg.rf.gd/Livros/Livro02.html">
+                    <img src="https://m.media-amazon.com/images/I/81z8BiNdSlL.jpg">
+                </a>
+                <p>História do Modernismo</p>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <title>Biblioteca CEEMTI</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./Imagens/LogoCEEMTI.jpg" type="image/png">
+        <style>
+            body{
+                background-color: rgb(34, 34, 34);
+                color: white;
+                font-family: arial, sans-serif;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #title{
+                flex-direction: column;
+                line-height: 10px;
+            }
+            h1{
+                font-weight: 200;
+            }
+            #titulo{
+                text-align: center;
+            }
+            li{
+                display:inline-block;
+                margin: 20px;
+            }
+            a{
+                color: white;
+            }
+            a:hover{
+                color: #FF0000;
+                transition: 0.3s all;
+            }
+            label{
+                line-height: 25px;
+                display: inline;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+            }
+            form [type="submit"]{
+                height: 50px;
+                width:50%;
+                background-color: #FF0000;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                font-weight: bold;
+            }
+            form [type="submit"]:hover{
+                cursor: pointer;
+            }
+            #regLivro{
+                text-align: center;
+                color: #FF0000;
+            }
+            aside{
+                margin-top: 30px;
+            }
+            form [type="text"]{
+                border: none;
+            }
+            form [type="date"]{
+                border: none;
+            }
+            form [type="number"]{
+                border: none;
+            }
+            input{
+                height: 30px;
+                padding: 10px;
+                outline: none;
+                border: 0;
+                font-size: 15px;
+                margin-top: 20px;
+            }
+            @media screen and (max-width: 760px){
+                header{
+                    flex-direction: column;
+                }
+                main{
+                    flex-direction: column;
+                }
+                h2{
+                    font-size: 35px; 
+                    text-align: center;
+                }
+                input{
+                    align-self: center;
+                }
+                img{
+                    width: 400px;
+                    height: 400px;
+                    margin-top: 60px;
+                }
+                ul{
+                    text-align: center;
+                    text-size: 10px;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="title">
+                <h1>Biblioteca</h1>
+                <h1>CEEMTI</h1>
+            </div>
+
+            <ul>
+                <a href="./Home.html"><li>Voltar</li></a>
+            </ul>
+        </header>
+            <h1 id="titulo">Cadastro de Livro</h1>
+            <aside>
+                <form action="registrar.php" method="POST">
+                    <label>Título : </label> <input type="text" id="livtitulo" name="liv_titulo"/> <br>
+                    <label>Autor : </label> <input type="text" id="author" name="autor"/> <br>
+                    <label>Editora : </label> <input type="text" id="publishing company" name="editora"/> <br>
+                    <label>Data de lançamento : </label> <input type="date" id="date" name="data"><br>
+                    <label>Número de páginas : </label> <input type="number" name="num_pagina" id="numpagina" placeholder="Ex.: 123"/> <br>
+
+                    <input type="submit" value="Registrar" name="reg_livro"/>
+                </form>
+            </aside>
+    </body>
+</html>
